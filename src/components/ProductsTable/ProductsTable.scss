@@ -1,0 +1,141 @@
+@use 'src/assets/sass/mixins';
+@use 'src/assets/sass/colors';
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    font-weight: 500;
+    padding-left: 15px;
+    padding-block: 20px;
+    text-align: left;
+
+    @media screen and (max-width: 768px) {
+        padding: 5px;
+    }
+}
+
+tr {
+    @media screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid colors.$grey;
+    }
+}
+
+th {
+    color: colors.$lighteen-black;
+    font-weight: 400;
+    font-size: 0.9rem;
+    padding: 8px;
+    padding-left: 15px;
+    text-align: left;
+    border-block: 1px solid colors.$grey;
+    background-color: colors.$lighteen-grey;
+}
+
+.table-container {
+    min-height: 400px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px rgba(209, 209, 209, 0.507);
+    background-color: colors.$white;
+    position: relative;
+    @include mixins.container
+}
+
+.table-controlers {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-inline: 10px;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.total-price-info {
+    font-size: 2.5rem;
+}
+
+.add-product-btn {
+    @include mixins.button-primary-outlined;
+}
+
+.product-name {
+    font-weight: 900;
+
+    @media screen and (max-width: 768px) {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+}
+
+.data-table{
+    margin-bottom: 30px;
+
+    
+    @media screen and (max-width: 768px) {
+        margin-bottom: 100px;
+    }
+}
+
+.table-footer {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-top: 1px solid colors.$grey;
+
+    
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+  }
+
+.edit-btn {
+    border-radius: 50%;
+    text-decoration: none;
+    border: 0;
+    background-color: white;
+    margin-inline: 20px;
+
+    &:hover {
+        background-color: colors.$grey;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 768px) {
+        margin-left: 0;
+    }
+}
+
+.buy-btn {
+    @include mixins.button-primary
+}
+
+.table-head {
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+}
+
+.table-body-id, .table-body-amount {
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+}
+
+.table-body-price {
+    @media screen and (max-width: 768px) {
+        font-weight: 600;
+    }
+}

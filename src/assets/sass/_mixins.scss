@@ -1,0 +1,160 @@
+@use 'colors';
+
+@mixin container {
+    max-width: 1200px;
+    padding: 1.5rem 0;
+    margin: 0 auto;
+}
+
+@mixin button-primary {
+    background: colors.$blue;
+    font-weight: 500;
+    font-size: 1rem;
+    color: colors.$white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 30px;
+    padding-block: 10px;
+    border: 1px solid colors.$blue;
+    transition: 0.2s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: colors.$darker-blue;
+    }
+
+    &:disabled {
+        background-color: colors.$grey;
+        color: colors.$white;
+        border: 1px solid colors.$grey;
+        cursor: not-allowed;
+    }
+}
+
+@mixin button-secondary {
+    background: colors.$black;
+    font-weight: 500;
+    font-size: 1rem;
+    color: colors.$white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 30px;
+    padding-block: 10px;
+    border: 1px solid colors.$black;
+    transition: 0.2s;
+
+    &:hover {
+        background-color: colors.$darker-blue;
+        color: colors.$white;
+        cursor: pointer;
+    }
+}
+
+@mixin button-primary-outlined {
+    background: colors.$white;
+    color: colors.$blue;
+    font-weight: 500;
+    font-size: 1rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 30px;
+    padding-block: 10px;
+    border: 1px solid colors.$blue;
+
+    &:hover {
+        background-color: colors.$blue;
+        color: colors.$white;
+        cursor: pointer;
+    }
+
+}
+
+@mixin button-outlined-white {
+    background: transparent;
+    color: colors.$white;
+    font-weight: 500;
+    font-size: 1rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 30px;
+    padding-block: 10px;
+    border: 1px solid colors.$white;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: white;
+        color: colors.$black;
+        cursor: pointer;
+    }
+}
+
+@mixin button-outlined-black {
+    background: transparent;
+    color: colors.$black;
+    font-weight: 500;
+    font-size: 1rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 30px;
+    padding-block: 10px;
+    border: 1px solid colors.$black;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: colors.$black;
+        color: colors.$white;
+        cursor: pointer;
+    }
+}
+
+@mixin button-danger-outlined {
+    background: colors.$white;
+    color: colors.$red;
+    font-weight: 500;
+    font-size: 1rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 30px;
+    padding-block: 10px;
+    border: 1px solid colors.$red;
+    transition: 0.3s;
+
+
+    &:hover {
+        background-color: colors.$red;
+        color: colors.$white;
+        cursor: pointer;
+    }
+}
+
+@mixin button-secondary-grey {
+    background: colors.$darker-grey;
+    color: colors.$white;
+    font-weight: 500;
+    font-size: 1rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 30px;
+    padding-block: 10px;
+    border: 1px solid colors.$grey;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: colors.$lighteen-black;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,76 @@
+@use 'src/assets/sass/colors';
+@use 'src/assets/sass/mixins';
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .modal-overlay {
+    width: 500px;
+  }
+  
+  .modal-content {
+    background-color: colors.$white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+  }
+  
+  .editing-title {
+    font-size: 1.6rem;
+  }
+  
+  .form-group {
+    margin-block: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .form-actions {
+    display: flex;
+    margin-top: 20px;
+    text-align: right;
+  }
+  
+.save-btn {
+    margin: 5px;
+    @include mixins.button-primary
+}
+
+.delete-btn {
+    margin: 5px;
+    @include mixins.button-danger-outlined
+}
+
+.cancel-btn {
+    margin: 5px;
+    @include mixins.button-secondary-grey
+}
+
+.input-validation {
+    color: colors.$red
+}
+
+.red {
+  color: colors.$red;
+}

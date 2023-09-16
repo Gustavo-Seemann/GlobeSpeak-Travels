@@ -1,30 +1,25 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div id="app">
+    <Navbar />
+    <router-view />
+    <SnackbarAlert />
+    <FooterComp />
+  </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import Navbar from './components/NavBar/NavBar.vue';
+import SnackbarAlert from './components/Snackbar/SnackbarAlert.vue';
+import FooterComp from './components/Footer/FooterComp.vue';
 
-nav {
-  padding: 30px;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+export default {
+  components: {
+    Navbar,
+    SnackbarAlert,
+    FooterComp,
   }
-}
-</style>
+};
+</script>
+
+<style src="./app.scss" lang="scss" />

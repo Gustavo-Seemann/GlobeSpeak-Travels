@@ -1,0 +1,11 @@
+@use 'src/assets/sass/colors';
+
+.selfcheckout-section {
+    padding: 30px;
+    background-color: colors.$lighteen-grey;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}

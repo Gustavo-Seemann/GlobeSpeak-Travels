@@ -1,0 +1,12 @@
+@use 'src/assets/sass/mixins';
+@use 'src/assets/sass/colors';
+
+section {
+    padding: 30px;
+    background-color: colors.$lighteen-grey;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 35px;
+}
