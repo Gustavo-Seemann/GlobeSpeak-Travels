@@ -1,0 +1,85 @@
+@use 'src/assets/sass/mixins';
+
+.carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.carousel button {
+    margin: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+  
+.carousel-container {
+    overflow: hidden;
+    width: 100%;
+}
+  
+.carousel-content {
+    display: flex;
+    transition: transform 0.5s;
+}
+  
+.carousel-slide {
+    width: 100%;
+    height: 600px;
+    flex: 0 0 100%;
+}
+
+.carousel-video {
+    position: absolute;
+    z-index: -1;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    bottom: 0;
+}
+  
+.carousel-overlay {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.486);
+}
+  
+.carousel-title {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+
+    @media screen and (max-width: 768px) {
+        font-size: 2rem;
+    }
+
+}
+  
+.carousel-description {
+    color: white;
+    font-size: 1rem;
+    margin-top: 5px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.carousel-controler {
+    margin: 15px !important;
+    border-radius: 50%;
+}
+
+.carousel-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.knowmore-btn {
+    margin-top: 60px !important;
+    padding-inline: 40px !important;
+    padding-block: 10px !important;
+    @include mixins.button-outlined-white
+}
